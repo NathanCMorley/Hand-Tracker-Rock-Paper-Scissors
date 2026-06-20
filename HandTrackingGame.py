@@ -106,7 +106,7 @@ def main():
     detector = htm.handDetector()
     isFrontFacing = True
     pickUID = random.Random().randint(0, 1000000000000000)
-    directory = "/Users/nathanmorley/documents/projects/HandtrackerAi/rps_data_sample/thumbsUp"
+    directory = "/Users/Hand-Tracker-Rock-Paper-Scissors/rps_data_sample/thumbsUp"
     RPS = 1
     playerGesture = 999999
     waitingForGesture = False
@@ -203,10 +203,7 @@ def main():
                 allTimeHighestStreak = streak
             print(streak)
             print("Computer Gesture: " + numToGesture(computerGesture))
-            print("Gesture: " + numToGesture(playerGesture))
-        
-
-            
+            print("Gesture: " + numToGesture(playerGesture)) 
 
             if playerGesture == 1:
                 rocks += 1
@@ -216,21 +213,8 @@ def main():
                 sizors += 1
             RPS = 0
             f = open("record.txt", "w")
-            f.write(str(rocks) + " " + str(papers) + " " + str(sizors) + " " + str(allTimeHighestStreak))
-
-
-        
-        
-        
-
-
-        #     cv2.imwrite(f"thumbsUp{pickUID}.png", img)
-        #     pickUID +=1
-        #     print("Pick")
-
-      
-
-        
+            f.write(str(rocks) + " " + str(papers) + " " + str(sizors) + " " + str(allTimeHighestStreak)
+   
         cv2.imshow("Image", img)
         cv2.waitKey(1)
         
